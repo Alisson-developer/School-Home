@@ -12,4 +12,8 @@ routes.get('/', (req, res) => {
     return res.send("Helo, World!")
 })
 
-app.listen(3000)
+var port = process.env.PORT || 3000
+
+app.listen(port, function () {
+    console.log('Umbler listening on port %s', port);
+})
