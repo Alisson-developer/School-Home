@@ -8,4 +8,8 @@ app.use(cors())
 app.use(express.json())
 app.use(routes)
 
+routes.get('/', (req, res) => {
+    return res.send("Helo, World!")
+})
+
 app.listen(3000)
